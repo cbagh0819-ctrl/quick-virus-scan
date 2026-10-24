@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡️ CyberSentinel Pro
+# 🛡️ Quick Virus Scan
 ### High-Speed Windows Threat Hunting, Forensic Audit & Rapid Incident Response Engine
 
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011%20%7C%20Server-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/)
@@ -21,15 +21,15 @@
 
 ---
 
-## ⚡ Why CyberSentinel?
+## ⚡ Why Quick Virus Scan?
 
 Traditional antivirus disk scans take **30 to 60 minutes** reading every byte of inert files. Meanwhile, active malware, reverse shells, living-off-the-land (LOLBins) binaries, and stealth persistence operate **in memory, registries, scheduled tasks, and network sockets**.
 
-**CyberSentinel Pro** audits the entire operational state of Windows in **under 15 seconds** using native OS telemetry, behavioral inspection, and Authenticode cryptographic verification—with **zero external third-party dependencies**.
+**Quick Virus Scan** audits the entire operational state of Windows in **under 15 seconds** using native OS telemetry, behavioral inspection, and Authenticode cryptographic verification—with **zero external third-party dependencies**.
 
 ```text
 ====================================================================================================
-           CYBERSENTINEL PRO : ADVANCED WINDOWS THREAT AUDIT & INCIDENT RESPONSE
+           QUICK VIRUS SCAN : ADVANCED WINDOWS THREAT AUDIT & INCIDENT RESPONSE
 ====================================================================================================
 [*] Initializing deep multi-vector system audit (Authenticode + Forensic Hashing)...
 
@@ -89,14 +89,14 @@ Double-click `run_scanner.bat`. It will run the audit, show live progress, promp
 
 ### Option 2: Command Line
 ```powershell
-python cyber_sentinel.py
+python quick_virus_scan.py
 ```
 
 ---
 
 ## 🔍 11 Forensic Detection Vectors
 
-| Vector | Focus Area | What CyberSentinel Checks |
+| Vector | Focus Area | What Quick Virus Scan Checks |
 | :--- | :--- | :--- |
 | **1. Windows Defender** | AV Engine State | Real-time protection, behavior monitor, IOAV filter, definitions freshness. |
 | **2. Active Threats** | Malware Detections | Live infected resources, active threat logs, and quarantine state. |
@@ -114,9 +114,9 @@ python cyber_sentinel.py
 
 ## 🎯 MITRE ATT&CK Matrix Mapping
 
-CyberSentinel Pro directly maps its heuristic and forensic checks to the MITRE ATT&CK framework:
+Quick Virus Scan directly maps its heuristic and forensic checks to the MITRE ATT&CK framework:
 
-| Tactic | Technique ID | Technique Name | CyberSentinel Detection |
+| Tactic | Technique ID | Technique Name | Detection Capability |
 | :--- | :--- | :--- | :--- |
 | **Execution** | `T1059.001` | PowerShell | Detects encoded strings, hidden windows, memory downloads. |
 | **Persistence** | `T1547.001` | Registry Run Keys / Startup Folder | Scans HKCU/HKLM Run keys and user Startup paths. |
@@ -131,11 +131,11 @@ CyberSentinel Pro directly maps its heuristic and forensic checks to the MITRE A
 
 ## 🛠️ CLI Reference & Automation
 
-CyberSentinel Pro includes a rich set of command-line flags for automation, CI/CD pipelines, and incident response automation:
+Quick Virus Scan includes a rich set of command-line flags for automation, CI/CD pipelines, and incident response:
 
 ```text
-usage: cyber_sentinel.py [-h] [--scan-only] [--quarantine-all] [--force-delete-all]
-                         [--json FILE] [--html FILE] [--no-color]
+usage: quick_virus_scan.py [-h] [--scan-only] [--quarantine-all] [--force-delete-all]
+                           [--json FILE] [--html FILE] [--no-color]
 
 Options:
   -h, --help            Show this help message and exit
@@ -151,12 +151,12 @@ Options:
 
 **Export both JSON and HTML reports:**
 ```powershell
-python cyber_sentinel.py --json audit.json --html audit.html
+python quick_virus_scan.py --json audit.json --html audit.html
 ```
 
 **Automated headless server scan & auto-quarantine:**
 ```powershell
-python cyber_sentinel.py --quarantine-all --json /var/log/sentinel.json
+python quick_virus_scan.py --quarantine-all --json /var/log/sentinel.json
 ```
 
 ---
@@ -164,8 +164,8 @@ python cyber_sentinel.py --quarantine-all --json /var/log/sentinel.json
 ## 📁 Repository Structure
 
 ```text
-cyber-sentinel-scanner/
-├── cyber_sentinel.py       # Core Multi-Vector Forensic & IR Engine
+quick-virus-scan/
+├── quick_virus_scan.py     # Core Multi-Vector Forensic & IR Engine
 ├── run_scanner.bat         # 1-Click Windows Batch Launcher
 ├── README.md               # Documentation & MITRE ATT&CK Matrix
 ├── LICENSE                 # MIT Open-Source License

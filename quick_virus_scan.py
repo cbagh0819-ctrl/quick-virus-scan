@@ -1,17 +1,7 @@
 #!/usr/bin/env python3
 """
-CyberSentinel Pro - Advanced Windows Incident Response & Threat Hunting Engine
+Quick Virus Scan - Advanced Windows Incident Response & Threat Hunting Engine
 Comprehensive multi-vector forensic security audit in under 5 minutes (< 30s typical).
-
-Features:
-  - 11 Deep Detection Vectors (Defender, Firewalls, Processes, LOLBins, Network/C2,
-    Persistence, Scheduled Tasks, Services, Hosts/DNS, High-Risk Drops, Event Logs)
-  - Smart Authenticode Digital Signature Verification (distinguishes signed installers from rogue malware)
-  - SHA-256 Cryptographic Hashing & VirusTotal Intel Integration
-  - Intelligent Threat Scoring (0 - 100 System Risk Score)
-  - Interactive Dual Remediation: [1] Force Delete, [2] Secure Quarantine, [3] Keep
-  - Headless CI/CD & SIEM Export (JSON & Standalone HTML Reports)
-  - Zero External Dependencies: Pure Python standard library + Windows Management APIs
 """
 
 import os
@@ -66,7 +56,7 @@ class Colors:
 def print_banner():
     banner = f"""{Colors.CYAN}{Colors.BOLD}
 ====================================================================================================
-           CYBERSENTINEL PRO : ADVANCED WINDOWS THREAT AUDIT & INCIDENT RESPONSE
+           QUICK VIRUS SCAN : ADVANCED WINDOWS THREAT AUDIT & INCIDENT RESPONSE
 ===================================================================================================={Colors.RESET}"""
     print(banner)
 

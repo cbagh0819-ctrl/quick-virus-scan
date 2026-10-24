@@ -1,12 +1,12 @@
 @echo off
 setlocal
-title CyberSentinel Pro - Incident Response & Threat Hunting Engine
+title Quick Virus Scan - High-Speed Threat Hunting Engine
 cd /d "%~dp0"
 echo ==============================================================================
-echo                 Launching CyberSentinel Pro Security Audit...
+echo                 Launching Quick Virus Scan Security Audit...
 echo ==============================================================================
 echo.
-python "%~dp0cyber_sentinel.py" --html "%~dp0security_report.html"
+python "%~dp0quick_virus_scan.py" --html "%~dp0security_report.html"
 echo.
 if exist "%~dp0security_report.html" (
     echo [INFO] A visual HTML security report was generated at:
