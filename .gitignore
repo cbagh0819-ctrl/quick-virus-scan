@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.venv/
+env/
+venv/
+
+# CyberSentinel Artifacts
+.quarantine/
+*.log
+report.json
+report.html
+security_report.html
+
+# Windows OS
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
